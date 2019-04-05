@@ -1,0 +1,23 @@
+{
+  "name": "node-knight-chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardorisch/node-knight-chess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardorisch/node-knight-chess/issues"
+  },
+  "homepage": "https://github.com/leonardorisch/node-knight-chess#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
