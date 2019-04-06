@@ -19,5 +19,11 @@
   "homepage": "https://github.com/leonardorisch/node-knight-chess#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
