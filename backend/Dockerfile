@@ -1,8 +1,9 @@
-FROM node:6.11-alpine
-RUN mkdir -p /app
-WORKDIR /app
-COPY package.json .
+FROM node:9.6.1
+RUN mkdir /app/
+RUN mkdir /app/backend/
+WORKDIR /app/backend/
+RUN npm install nodemon -g
 RUN npm install
-COPY server.js .
+COPY . .
 EXPOSE 8626
-CMD [ "node", "server.js" ]
+CMD [ "nodemon", "server.js" ]
