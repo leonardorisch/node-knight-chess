@@ -1,24 +1,39 @@
 const KnightController = require('../knight/KnightController');
-const request = require('supertest');
-const server = require('../server.js');
+const supertest = require('supertest');
+const app = require('../server.js');
+
+let request = null
+let server = null
+
+beforeAll(function(done){
+  server = app.listen(done)
+  request = supertest.agent(server)
+})
+
+afterAll(function(done){
+  server.close(done)
+})
+
 describe('post knight position', () => {
- test('when data is valid', async () => {
+ test('when data is valid', async (done) => {
    const params = {
      position: 'D1'
    }
-   const response = await request(server).post('/knight').send(params);
+   request.post(`/knight`)
+          .send(params)
+          .expect(200)
+          .end(done);
 
-   expect(response.status).toEqual(200);
-   expect(response.text).toContain('Ok');
  });
 
- test('when data is invalid', async () => {
+ test('when data is invalid', async (done) => {
    const params = {
      position: 'D15'
    }
-   const response = await request(server).post('/knight').send(params);
-
-   expect(response.status).toEqual(400);
-   expect(response.text).toContain('Check your data');
+   request.post(`/knight`)
+          .send(params)
+          .expect(400)
+          .expect('Check your data')
+          .end(done);
  });
 });
