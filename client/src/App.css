@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+.highlight {
+  background-color: red !important;
+}
+
 .dark {
   background-color: #b58863;
 }
