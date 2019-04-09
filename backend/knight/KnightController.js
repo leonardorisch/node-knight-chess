@@ -16,6 +16,4 @@ function handleData(position) {
   return position.match(/^[a-hA-H][0-9]$/) !== null
 }
 
-
-
 module.exports = router;
