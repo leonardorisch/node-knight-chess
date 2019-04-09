@@ -3,9 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const router = express.Router();
-router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   if (!handleData(req.body.position)) {
     responseHandler.response(res, 400, 'Check your data')
   } else {
