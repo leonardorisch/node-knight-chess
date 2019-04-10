@@ -6,16 +6,15 @@ class ChessSquare extends Component {
     super(props);
     this.darkClass = 'dark';
     this.lightClass = 'light';
-    console.log(this.props)
+    this.className = this.props.className;
     this.x = this.props.x;
     this.y = this.props.y;
-    this.position = String.fromCharCode(this.x + 64) + this.y;
+    this.position = this.props.position;
     this.selectSquare = this.selectSquare.bind(this);
-    this.state = { active: '' }
   }
 
   render() {
-    return <div className={`chessSquare ${this.squareClass(this.x, this.y)} ${this.state.active}`}
+    return <div className={`chessSquare ${this.squareClass(this.x, this.y)}`}
       onClick={this.selectSquare}>
     </div>
   }
@@ -31,17 +30,14 @@ class ChessSquare extends Component {
   }
 
   selectSquare() {
-    if(this.state.highlight) {
-      this.setState({ highlight: '' });
-    } else {
-      const position = this.position;
-      axios.post(`http://localhost:8626/knight`, {
-        position: this.position
-      })
-      .then(res => {
-        this.setState({ active: res.status === 200 ? 'highlight' : '' });
-      })
-    }
+    axios.post(`http://localhost:8626/knight`, {
+      position: this.position
+    })
+    .then(res => {
+      const position = res.status === 200 ? this.position : '';
+    })
+
+    this.props.onActiveSquare(this.position);
   }
 }
 
