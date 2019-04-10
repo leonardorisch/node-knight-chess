@@ -8,4 +8,4 @@ before_script:
   - yarn install
   - cd ..
 
-script: build.sh
+script: bash build.sh
