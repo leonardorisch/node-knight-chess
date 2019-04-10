@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
+import ChessSquare from './ChessSquare.js';
 
 class Chess extends Component {
   constructor(props) {
-    super(props);
-    this.darkClass = 'dark';
-    this.lightClass = 'light';
+    super(props)
+    this.state = { active: '' };
+    this.selectSquare = this.selectSquare.bind(this);
+    this.highlightClass = this.highlightClass.bind(this);
+    this.mount = this.mount.bind(this);
+  }
+
+  selectSquare(field) {
+    this.setState({ active: field })
   }
 
   render() {
@@ -20,23 +27,27 @@ class Chess extends Component {
     const squares = []
     for(let x = 1; x < 9; x++) {
       for(let y = 1; y < 9; y++) {
-        squares.push(
-          <div className={"chessSquare " + this.squareClass(x, y)}
-               key={x.toString() + y.toString()}> </div>
-        )
+        const position = String.fromCharCode(x + 64) + y;
+        squares.push(this.mount(x, y, position))
       }
     }
     return squares
   }
 
-  squareClass(x, y) {
-    const odd = x % 2;
+  highlightClass(position) {
+    return this.state['active'] === position ? 'highlight' : ''
+  }
 
-    if (y % 2) {
-      return odd ? this.lightClass : this.darkClass
-    }
-
-    return odd ? this.darkClass : this.lightClass
+  mount(x, y, position) {
+    return (
+      <div key={x.toString() + y.toString()} className={this.highlightClass(position)}>
+        <ChessSquare x={x} y={y}
+                     key={x.toString() + y.toString()}
+                     onActiveSquare={this.selectSquare}
+                     position={position}
+        />
+      </div>
+    )
   }
 }
 
