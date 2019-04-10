@@ -6,5 +6,6 @@ before_script:
   - npm install
   - cd ../client
   - yarn install
+  - cd ..
 
 script: build.sh
