@@ -2,6 +2,18 @@ const KnightService = require('../knight/KnightService');
 const supertest = require('supertest');
 const app = require('../server.js');
 
+let request = null
+let server = null
+
+beforeAll(function(done){
+  server = app.listen(done)
+  request = supertest.agent(server)
+})
+
+afterAll(function(done){
+  server.close(done)
+})
+
 describe('identifyAvailableMovements', () => {
  test('calculate right available movements based on chess table boundaries', () => {
    const service = new KnightService();
