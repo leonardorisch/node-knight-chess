@@ -1,6 +1,7 @@
 const responseHandler = require('../utils/responseHandler');
 const express = require('express');
 const bodyParser = require('body-parser');
+const KnightService = require('./KnightService');
 
 const router = express.Router();
 router.use(bodyParser.json());
@@ -8,7 +9,13 @@ router.post('/', (req, res, next) => {
   if (!handleData(req.body.position)) {
     responseHandler.response(res, 400, 'Check your data')
   } else {
-    responseHandler.response(res, 200, 'Ok')
+    try {
+      const service = new KnightService();
+      const serializedObjects = service.identifyAvailableMovements(req.body.position);
+      responseHandler.response(res, 200, serializedObjects)
+    } catch(error) {
+      responseHandler.response(res, 422, error.message)
+    }
   }
 });
 
