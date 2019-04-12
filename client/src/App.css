@@ -15,6 +15,14 @@
   background-color: red !important;
 }
 
+.first-movements>.dark, .first-movements>.light {
+  background-color: green !important;
+}
+
+.second-movements>.dark, .second-movements>.light {
+  background-color: blue !important;
+}
+
 .dark {
   background-color: #b58863;
 }

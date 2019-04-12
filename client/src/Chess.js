@@ -5,14 +5,18 @@ import ChessSquare from './ChessSquare.js';
 class Chess extends Component {
   constructor(props) {
     super(props)
-    this.state = { active: '' };
+    this.state = { active: '', firstMovements: [], secondMovements: [] };
     this.selectSquare = this.selectSquare.bind(this);
     this.highlightClass = this.highlightClass.bind(this);
     this.mount = this.mount.bind(this);
   }
 
-  selectSquare(field) {
-    this.setState({ active: field })
+  selectSquare(field, firstMovements, secondMovements) {
+    this.setState({
+      active: field,
+      firstMovements: firstMovements,
+      secondMovements: secondMovements
+    })
   }
 
   render() {
@@ -35,7 +39,13 @@ class Chess extends Component {
   }
 
   highlightClass(position) {
-    return this.state['active'] === position ? 'highlight' : ''
+    if(this.state.active === position) {
+      return 'highlight';
+    } else if(this.state.firstMovements.includes(position)) {
+      return 'first-movements';
+    } else if(this.state.secondMovements.includes(position)) {
+      return 'second-movements';
+    }
   }
 
   mount(x, y, position) {
