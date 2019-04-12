@@ -2,14 +2,14 @@ var serialize = require('serialize-javascript');
 
 class KnightService {
   identifyAvailableMovements(position) {
-    const originalPosition = position;
-    const { x, y } = this.unMountPosition(position);
-    const firstMovements = this.calculateAvailableMovements(x, y, originalPosition);
+    let originalPosition = position;
+    let { x, y } = this.unMountPosition(position);
+    let firstMovements = this.calculateAvailableMovements(x, y, originalPosition);
     let secondMovements = [];
 
     for(var i = 0; i < firstMovements.length; i++) {
-      const movementPosition = firstMovements[i];
-      const availableMovements = this.calculateAvailableMovements(movementPosition['x'], movementPosition['y'], originalPosition);
+      let movementPosition = this.unMountPosition(firstMovements[i]);
+      let availableMovements = this.calculateAvailableMovements(movementPosition['x'], movementPosition['y'], originalPosition);
       secondMovements = secondMovements.concat(availableMovements);
     }
     return serialize({ firstMovements: firstMovements, secondMovements: secondMovements });
@@ -37,7 +37,7 @@ class KnightService {
     const position      = this.generatePosition(x, y);
     if (x < boundaryUp && x > boundaryDown && y < boundaryUp &&
         y > boundaryDown && position != originalPosition) {
-      return { x: x, y: y, position: position };
+      return position;
     }
   }
 
