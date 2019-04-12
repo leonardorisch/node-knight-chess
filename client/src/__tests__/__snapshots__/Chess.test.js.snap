@@ -4,513 +4,385 @@ exports[`renders without crashing 1`] = `
 <div
   className="chessTable"
 >
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare dark"
       onClick={[Function]}
     />
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div
       className="chessSquare light"
       onClick={[Function]}

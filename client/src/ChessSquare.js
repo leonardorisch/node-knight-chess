@@ -10,6 +10,8 @@ class ChessSquare extends Component {
     this.x = this.props.x;
     this.y = this.props.y;
     this.position = this.props.position;
+    this.firstMovements = [];
+    this.secondMovements = [];
     this.selectSquare = this.selectSquare.bind(this);
   }
 
@@ -34,10 +36,11 @@ class ChessSquare extends Component {
       position: this.position
     })
     .then(res => {
-      const position = res.status === 200 ? this.position : '';
+      const parsedResponse = res.data;
+      this.firstMovements = parsedResponse.firstMovements;
+      this.secondMovements = parsedResponse.secondMovements;
+      this.props.onActiveSquare(this.position, this.firstMovements, this.secondMovements);
     })
-
-    this.props.onActiveSquare(this.position);
   }
 }
 

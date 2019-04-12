@@ -18,20 +18,8 @@ describe('identifyAvailableMovements', () => {
  test('calculate right available movements based on chess table boundaries', () => {
    const service = new KnightService();
    const response = JSON.parse(service.identifyAvailableMovements('A1'))['firstMovements'];
-   expect(response[0]).toEqual(
-     {
-       position: 'C2',
-       x: 3,
-       y: 2,
-     }
-   )
-   expect(response[1]).toEqual(
-     {
-       position: 'B3',
-       x: 2,
-       y: 3,
-     }
-   )
+   expect(response[0]).toEqual('C2');
+   expect(response[1]).toEqual('B3');
  });
 });
 
@@ -43,19 +31,11 @@ describe('check boundaries', () => {
      position: 'D1'
    }
    const service = new KnightService();
-   expect(service.checkBoundaries(params['x'], params['y'], params['position'])).toEqual({
-     x: 4,
-     y: 2,
-     position: 'D2'
-   })
+   expect(service.checkBoundaries(params['x'], params['y'], params['position'])).toEqual('D2');
  });
 
  test('when position is the same must not return object', () => {
-   const params = {
-     x: 4,
-     y: 2,
-     position: 'D2'
-   }
+   const params = 'D2';
    const service = new KnightService();
    expect(service.checkBoundaries(params['x'], params['y'], params['position'])).toBeUndefined();
  });
