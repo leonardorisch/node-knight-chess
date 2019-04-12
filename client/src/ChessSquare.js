@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 class ChessSquare extends Component {
   constructor(props) {
     super(props);
-    this.darkClass = 'dark';
-    this.lightClass = 'light';
+    this.darkClass = "dark";
+    this.lightClass = "light";
     this.className = this.props.className;
     this.x = this.props.x;
     this.y = this.props.y;
@@ -16,9 +16,12 @@ class ChessSquare extends Component {
   }
 
   render() {
-    return <div className={`chessSquare ${this.squareClass(this.x, this.y)}`}
-      onClick={this.selectSquare}>
-    </div>
+    return (
+      <div
+        className={`chessSquare ${this.squareClass(this.x, this.y)}`}
+        onClick={this.selectSquare}
+      />
+    );
   }
 
   squareClass() {
@@ -32,15 +35,20 @@ class ChessSquare extends Component {
   }
 
   selectSquare() {
-    axios.post(`http://localhost:8626/knight`, {
-      position: this.position
-    })
-    .then(res => {
-      const parsedResponse = res.data;
-      this.firstMovements = parsedResponse.firstMovements;
-      this.secondMovements = parsedResponse.secondMovements;
-      this.props.onActiveSquare(this.position, this.firstMovements, this.secondMovements);
-    })
+    axios
+      .post(`http://localhost:8626/knight`, {
+        position: this.position
+      })
+      .then(res => {
+        const parsedResponse = res.data;
+        this.firstMovements = parsedResponse.firstMovements;
+        this.secondMovements = parsedResponse.secondMovements;
+        this.props.onActiveSquare(
+          this.position,
+          this.firstMovements,
+          this.secondMovements
+        );
+      });
   }
 }
 
